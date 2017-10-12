@@ -1,6 +1,6 @@
 from flask import redirect, url_for, session, flash
 
-# Hardcoaded username/password
+# Hardcoded username/password
 USERNAME = "DWROX"
 PASSW = "nottrue"
 
@@ -23,7 +23,7 @@ def auth_helper(user, passw):
         else:
             return BAD_USER_PASS
 
-# Function that flashes the right error message
+# Function that flashes the right error message depending on the input value
 def auth_flash(message):
     if message == -2:
         flash("Incorrect password")

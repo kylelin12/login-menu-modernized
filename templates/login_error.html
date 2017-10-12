@@ -1,9 +1,12 @@
 {% extends 'login.html' %}
 {% block errormsg %}
 {% set errormsg = get_flashed_messages() %}
+<!-- Renders the error message on the page
+     Nothing shows if there aren't any errors. -->
 {% for msg in errormsg %}
 <h3 style="color: red;">{{ msg }}</h3>
 {% endfor %}
+<!-- Login form -->
 <form action="/auth" method="POST">
     <h5 style="margin-bottom: 0px;">Login</h5>
     <input type="text" name="username-i" value="" placeholder="Username"/>
